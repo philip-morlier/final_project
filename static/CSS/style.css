@@ -1,14 +1,7 @@
-.page-header {
-    padding: 40px;
-    text-align: center;
-    background: #013369;
-    color: white;
-    font-size: 50px;
-  }
 
-/* .container-fluid {
-    background: grey;
-} */
+.page-header {
+    font-size: 100px;
+}
 
 hr {
     width: 100%;
@@ -18,3 +11,4 @@ hr {
     margin-left: auto;
     border-width: 3px;
     border-color: #D50A0A;
+
