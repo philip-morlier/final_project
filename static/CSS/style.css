@@ -1,6 +1,7 @@
-
 .page-header {
     font-size: 100px;
+    color: white;
+    background-color: #013369;
 }
 
 hr {
@@ -11,4 +12,3 @@ hr {
     margin-left: auto;
     border-width: 3px;
     border-color: #D50A0A;
-
