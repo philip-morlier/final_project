@@ -12,3 +12,9 @@ hr {
     margin-left: auto;
     border-width: 3px;
     border-color: #D50A0A;
+}
+
+.page-footer {
+    color: white;
+    background-color: #013369;
+}
