@@ -58,7 +58,7 @@ def plays():
         NFL.posteam,
         NFL.game_date,
         # NFL.yardline_100,
-        # NFL.quarter_seconds_remaining,
+        NFL.time,
         NFL.qtr,
         NFL.down,
         NFL.ydstogo,

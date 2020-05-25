@@ -1,7 +1,320 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en-us">
+
 <head>
-<title>Web app name</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Punt, Pass, Predict</title>
+
+    <!-- Bootstrap CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- This line is money! It points your HTML to the CSS file. -->
+    <!-- Notice the "relative" pathway? It matches a file inside our current directory's "assets" folder. Open it to see our style rules. -->
+    <link rel="stylesheet" type="text/css" href="static/CSS/style.css">
+
+    
 </head>
-<h1>Hello world.</h1>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="page-header">
+                    <img alt="NFL Logo" src="static/images/nfl_logo.png" style="float:left" >
+                        <center style="position:relative; top:70px;"><b>The future is now</b></center>
+                        <br>
+                        <hr>
+                </div>
+            </div>
+        </div>
+        <!-- <div class="row">
+            <div class="col-md-12">
+                <div class="hero-image">
+                    <div class="hero-text">
+                    <h1>The future of football is now</h1>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+        <div class="row">
+            <div class="col-md-12">
+                <br>
+                <br>
+                <br>
+                <h3>
+                    <center>Welcome to the Punt, Pass, Predict machine learning simulator</center>
+                </h3>
+                <br>
+                <p>
+                    In a world fueled by rapid advancement in technology, we attempted to answer a single question...If you built a machine learning algorithm and trained it with over 10 years of historical NFL play-by-play data, could you accurately predict the next play in a live football game? The answer...yes! 
+                    <br>
+                    <br> 
+                    Don't believe us? Try it out for yourself. Simply read the instructions below and follow-along during your favorite teams next game. Have fun!
+                </p>
+                <br>
+                <hr>
+                <br>
+                <br>
+                <h3>
+                    <center>How to play the game!</center>
+                </h3>
+                <br>
+                <p>
+                    <ol type = "1">
+                        <li>Before the game begins, scroll down and preview the inputs. You will have to enter this information for every play fairly quickly, so it will help if you know what is required in advance. </li>
+                        <li>Before the game begins, select the home and away team for today's match-up and click submit.</li>
+                        <li>After the receiving team receives the initial kick-off enter the pre-play data and select submit. You must use proper formatting in the open text fields. If you do not use proper formatting the results will not be provided.</li>
+                        <li>Once you submit the pre-play data, the prediction for the next play will be displayed below.</li>
+                        <li>After the play is completed, enter the result for play type and yards in the two post-play fields and press submit.</li>
+                        <li>Repeat these steps for the entire game and see how many times the algorithm accurately predicts the next play.</li>  
+                     </ol>
+                </p>
+                <br>
+                <hr>
+                <br>
+                <br>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <h3>
+                    <center>Select two teams for today's match-up</center>
+                </h3>
+                <br>
+                <form></form>
+                    <center><label for="homeTeam"><b>Home Team:</b></label>
+                    <select id="homeTeam">
+                        <option value="">Select</option>
+                        <option value="">Arizona Cardinals</option>
+                        <option value="">Atlanta Falcons</option>
+                        <option value="">Baltimore Ravens</option>
+                        <option value="">Buffalo Bills</option>
+                        <option value="">Carolina Panthers</option>
+                        <option value="">Chicago Bears</option>
+                        <option value="">Cincinnati Bengals</option>
+                        <option value="">Cleveland Browns</option>
+                        <option value="">Dallas Cowboys</option>
+                        <option value="">Denver Broncos</option>
+                        <option value="">Detroit Lions</option>
+                        <option value="">Green Bay Packers</option>
+                        <option value="">Houston Texans</option>
+                        <option value="">Indianapolis Colts</option>
+                        <option value="">Jacksonville Jaguars</option>
+                        <option value="">Kansas City Chiefs</option>
+                        <option value="">Las Vegas Raiders</option>
+                        <option value="">Los Angeles Chargers</option>
+                        <option value="">Las Angeles Rams</option>
+                        <option value="">Miami Dolphins</option>
+                        <option value="">Minnesota Vikings</option>
+                        <option value="">New England Patriots</option>
+                        <option value="">New Orleans Saints</option>
+                        <option value="">New York Giants</option>
+                        <option value="">New York Jets</option>
+                        <option value="">Philadelphia Eagles</option>
+                        <option value="">Pittsburgh Steelers</option>
+                        <option value="">San Francisco 49ers</option>
+                        <option value="">Seattle Seahawks</option>
+                        <option value="">Tampa Bay Buccaneers</option>
+                        <option value="">Tennessee Titans</option>
+                        <option value="">Washington Redskins</option>
+                        </select></center>
+                        <center><label for="awayTeam"><b>Away Team:</b></label>
+                        <select id="awayTeam">
+                        <option value="">Select</option>
+                        <option value="">Arizona Cardinals</option>
+                        <option value="">Atlanta Falcons</option>
+                        <option value="">Baltimore Ravens</option>
+                        <option value="">Buffalo Bills</option>
+                        <option value="">Carolina Panthers</option>
+                        <option value="">Chicago Bears</option>
+                        <option value="">Cincinnati Bengals</option>
+                        <option value="">Cleveland Browns</option>
+                        <option value="">Dallas Cowboys</option>
+                        <option value="">Denver Broncos</option>
+                        <option value="">Detroit Lions</option>
+                        <option value="">Green Bay Packers</option>
+                        <option value="">Houston Texans</option>
+                        <option value="">Indianapolis Colts</option>
+                        <option value="">Jacksonville Jaguars</option>
+                        <option value="">Kansas City Chiefs</option>
+                        <option value="">Las Vegas Raiders</option>
+                        <option value="">Los Angeles Chargers</option>
+                        <option value="">Las Angeles Rams</option>
+                        <option value="">Miami Dolphins</option>
+                        <option value="">Minnesota Vikings</option>
+                        <option value="">New England Patriots</option>
+                        <option value="">New Orleans Saints</option>
+                        <option value="">New York Giants</option>
+                        <option value="">New York Jets</option>
+                        <option value="">Philadelphia Eagles</option>
+                        <option value="">Pittsburgh Steelers</option>
+                        <option value="">San Francisco 49ers</option>
+                        <option value="">Seattle Seahawks</option>
+                        <option value="">Tampa Bay Buccaneers</option>
+                        <option value="">Tennessee Titans</option>
+                        <option value="">Washington Redskins</option>
+                    </select></center>
+                    <br>
+                    <center><input type="submit" value="Submit"></center>
+                    <br>
+                </form>
+                <br>
+                <hr>
+                <br>
+                <br>
+            </div>
+        </div>
+
+        <div class="row">
+            <form id="preplay">
+            <div class="col-md-12">
+                <center><h3>
+                    Pre-Play Inputs
+                </h3></center>
+                <br>
+                <label for="posTeam">Offensive Team:</label>
+                <select id="posTeam">
+                    <option value="">Select</option>
+                    <option value="">Arizona Cardinals</option>
+                    <option value="">Atlanta Falcons</option>
+                    <option value="">Baltimore Ravens</option>
+                    <option value="">Buffalo Bills</option>
+                    <option value="">Carolina Panthers</option>
+                    <option value="">Chicago Bears</option>
+                    <option value="">Cincinnati Bengals</option>
+                    <option value="">Cleveland Browns</option>
+                    <option value="">Dallas Cowboys</option>
+                    <option value="">Denver Broncos</option>
+                    <option value="">Detroit Lions</option>
+                    <option value="">Green Bay Packers</option>
+                    <option value="">Houston Texans</option>
+                    <option value="">Indianapolis Colts</option>
+                    <option value="">Jacksonville Jaguars</option>
+                    <option value="">Kansas City Chiefs</option>
+                    <option value="">Las Vegas Raiders</option>
+                    <option value="">Los Angeles Chargers</option>
+                    <option value="">Las Angeles Rams</option>
+                    <option value="">Miami Dolphins</option>
+                    <option value="">Minnesota Vikings</option>
+                    <option value="">New England Patriots</option>
+                    <option value="">New Orleans Saints</option>
+                    <option value="">New York Giants</option>
+                    <option value="">New York Jets</option>
+                    <option value="">Philadelphia Eagles</option>
+                    <option value="">Pittsburgh Steelers</option>
+                    <option value="">San Francisco 49ers</option>
+                    <option value="">Seattle Seahawks</option>
+                    <option value="">Tampa Bay Buccaneers</option>
+                    <option value="">Tennessee Titans</option>
+                    <option value="">Washington Redskins</option>
+                </select>
+                <br>
+                <label for="quarter">Quarter:</label>
+                <select id="quarter">
+                    <option value="qSelect">Select</option>
+                    <option value="q1">1</option>
+                    <option value="q2">2</option>
+                    <option value="q3">3</option>
+                    <option value="q4">4</option>
+                </select>
+                <br>
+                <label for="timeOnClock">Time on Clock:</label>
+                <input type="text" id="timeOnClock" name="timeOnClock">
+                <br>
+                <label for="down">Down:</label>
+                <select id="down">
+                    <option value="dSelect">Select</option>
+                    <option value="d1">1</option>
+                    <option value="d2">2</option>
+                    <option value="d3">3</option>
+                    <option value="d4">4</option>
+                </select>
+                <br>
+                <label for="yardsToGo">Yards To Go:</label>
+                <input type="text" id="yardsToGo" name="yardsToGo">
+                <br>
+                <label for="yardline">Yardline:</label>
+                <input type="text" id="yardline" name="yardline">
+            </div>
+                <br>
+                <center><input type="submit" value="Submit"></center>
+                <br>
+            </form> 
+            <br>
+            <form id="postplay">
+                <div class="col-md-12">
+                    <center><h3>
+                        Post-Play Inputs
+                    </h3></center>
+                    <br>
+                    <label for="playType">Play Type:</label>
+                    <select id="playType">
+                        <option value="dSelect">Select</option>
+                        <option value="run">Run</option>
+                        <option value="pass">Pass</option>
+                        <option value="fieldGoal">Field Goal</option>
+                        <option value="punt">Punt</option>
+                    </select>
+                    <br>
+                    <label for="yards">Yards:</label>
+                    <input type="text" id="yards" name="yards">
+                </div>
+                <br>
+                <center><input type="submit" value="Submit"></center>
+                <br>
+            </form>
+        </div>
+        <br>
+        <hr>
+        <br>
+        <br>
+        <div class="row">
+            <div class="col-md-12">
+                <center><h3>
+                    The next play will be a _________ for _____ yards
+                </h3></center>
+            </div>
+        </div>
+        <br>
+        <hr>
+        <br>
+        <br>
+        <div class="row">
+            <div class="col-md-12">
+                <center><h3>
+                    Historical Match-up Data
+                </h3></center>
+                <br>
+                <center><p>
+                    Insert Tableau data here...
+                </p></center>
+            </div>
+        </div>
+        <br>
+        <hr>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="page-footer">
+                    <center><h5>
+                        Punt, Pass, Predict 
+                    </h5>
+                    <h7>
+                        Property of and created by: Chad Gielow, Christian, Philip Molier, and Ty Sorensen
+                        <br>
+                        Year: 2020
+                    </h7></center>
+                    <br>    
+                </div>  
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+</body>
+
 </html>
