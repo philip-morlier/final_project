@@ -14,6 +14,12 @@ hr {
     border-color: #D50A0A;
 }
 
+.tableauPlaceholder {
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+}
+
 .page-footer {
     color: white;
     background-color: #013369;
