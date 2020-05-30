@@ -30,14 +30,14 @@
             </div>
         </div>
         <div class="row-play">
-            <center><form id="postplay" action="preplay.html">
+            <center><form id ="postplay" action="{{ url_for('main') }}" method="GET">
                 <div class="col-md-12">
                     <center><h3>
                         Post-Play Inputs
                     </h3></center>
                     <br>
                     <label for="playType"><b>Play Type:</b></label>
-                    <select id="playType">
+                    <select id="playType" name="playType">
                         <option value="dSelect">Select</option>
                         <option value="run">Run</option>
                         <option value="pass">Pass</option>
@@ -46,11 +46,18 @@
                     </select>
                     <br>
                     <label for="yards"><b>Yards:</b></label>
-                    <input type="text" id="yards" name="yards">
+                    <input type="number" id="yards" name="yards">
                 </div>
                 <br>
                 <center><input type="submit" value="Submit"></center>
                 <br>
+                    <div class="result" align="center">
+                    {% if result %}
+                        <br>
+                        <br> Predicted Play:
+                            <p style="font-size:50px">{{ result }}</p>
+                    {% endif %}
+                </div>
             </form></center>
         </div>
         <br>
