@@ -27,7 +27,7 @@ Base = automap_base()
 Base.prepare(engine, reflect=True)
 
 # Save reference to the table
-NFL = Base.classes.NFL_Plays
+NFL = Base.classes.NFLPlays
 # Team = Base.classes.Team_ID
 
 # Flask Setup
