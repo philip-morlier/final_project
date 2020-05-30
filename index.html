@@ -73,9 +73,9 @@
                     <center>Let's get started...Select two teams for today's match-up</center>
                 </h3>
                 <br>
-                <form action="preplay.html">
-                    <center><label for="homeTeam"><b>Home Team:</b></label>
-                    <select id="homeTeam">
+                <center><form action="preplay.html">
+                    <label for="homeTeam"><b>Home Team:</b></label>
+                    <select class="form-control" id="homeTeam" name="homeTeam" onClick="getHomeTeam">
                         <option value="Select">Select</option>
                         <option value="1">Arizona Cardinals</option>
                         <option value="2">Atlanta Falcons</option>
@@ -109,9 +109,9 @@
                         <option value="30">Tampa Bay Buccaneers</option>
                         <option value="31">Tennessee Titans</option>
                         <option value="32">Washington Redskins</option>
-                    </select></center>
-                    <center><label for="awayTeam"><b>Away Team:</b></label>
-                    <select id="awayTeam">
+                    </select>
+                    <label for="awayTeam"><b>Away Team:</b></label>
+                    <select class="form-control" id="awayTeam" name="awayTeam" onClick="getAwayTeam">
                         <option value="Select">Select</option>
                         <option value="1">Arizona Cardinals</option>
                         <option value="2">Atlanta Falcons</option>
@@ -145,11 +145,11 @@
                         <option value="30">Tampa Bay Buccaneers</option>
                         <option value="31">Tennessee Titans</option>
                         <option value="32">Washington Redskins</option>
-                    </select></center>
+                    </select>
                     <br>
                     <center><input type="submit" value="Submit"></center>
                     <br>
-                </form>
+                </form></center>
                 <br>
             </div>
         </div>
