@@ -1,0 +1,93 @@
+<!doctype html>
+<html>
+<style>
+form {
+    margin: auto;
+    width: 35%;
+}
+.result {
+    margin: auto;
+    width: 35%;
+    border: 1px solid #ccc;
+}
+</style>
+<head>
+    <title>Play Predictor Model</title>
+</head>
+<form action="{{ url_for('main') }}" method="POST">
+    <fieldset>
+        <legend>Input values:</legend>
+       
+        <br>
+                <label for="posTeam">Offensive Team:</label>
+                <select id="posTeam" name="posteam">
+                    <option value="Select">Select</option>
+                    <option value="1">Arizona Cardinals</option>
+                    <option value="2">Atlanta Falcons</option>
+                    <option value="3">Baltimore Ravens</option>
+                    <option value="4">Buffalo Bills</option>
+                    <option value="5">Carolina Panthers</option>
+                    <option value="6">Chicago Bears</option>
+                    <option value="7">Cincinnati Bengals</option>
+                    <option value="8">Cleveland Browns</option>
+                    <option value="9">Dallas Cowboys</option>
+                    <option value="10">Denver Broncos</option>
+                    <option value="11">Detroit Lions</option>
+                    <option value="12">Green Bay Packers</option>
+                    <option value="13">Houston Texans</option>
+                    <option value="14">Indianapolis Colts</option>
+                    <option value="15">Jacksonville Jaguars</option>
+                    <option value="16">Kansas City Chiefs</option>
+                    <option value="25">Las Vegas Raiders</option>
+                    <option value="18">Los Angeles Chargers</option>
+                    <option value="17">Las Angeles Rams</option>
+                    <option value="19">Miami Dolphins</option>
+                    <option value="20">Minnesota Vikings</option>
+                    <option value="21">New England Patriots</option>
+                    <option value="22">New Orleans Saints</option>
+                    <option value="23">New York Giants</option>
+                    <option value="24">New York Jets</option>
+                    <option value="26">Philadelphia Eagles</option>
+                    <option value="27">Pittsburgh Steelers</option>
+                    <option value="29">San Francisco 49ers</option>
+                    <option value="28">Seattle Seahawks</option>
+                    <option value="30">Tampa Bay Buccaneers</option>
+                    <option value="31">Tennessee Titans</option>
+                    <option value="32">Washington Redskins</option>
+                </select>
+                <br>       
+        <br> Yards To Go:
+        <input name="ydstogo" type="number" required>
+        <br>
+        <br> Yardline:
+        <input name="yardline" type="number" required>
+        <br>
+        <br>
+        <label for="down">Down:</label>
+                <select id="down" name="down">
+                    <option value="dSelect">Select</option>
+                    <option value="d1">1</option>
+                    <option value="d2">2</option>
+                    <option value="d3">3</option>
+                    <option value="d4">4</option>
+                </select>
+        <br>
+        <br> Time:
+        <input name="time" type="text" required>
+        <br>
+        <br>
+        <label for="quarter">Quarter:</label>
+                <select id="quarter" name="quarter">
+                    <option value="qSelect">Select</option>
+                    <option value="q1">1</option>
+                    <option value="q2">2</option>
+                    <option value="q3">3</option>
+                    <option value="q4">4</option>
+                    <option value="q5">Over Time</option>
+                </select>
+        <br>
+        <input type="submit">
+    </fieldset>
+</form>
+<br>
+</html>

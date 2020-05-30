@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Punt, Pass, Predict</title>
+
+    <!-- Bootstrap CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- This line is money! It points your HTML to the CSS file. -->
+    <!-- Notice the "relative" pathway? It matches a file inside our current directory's "assets" folder. Open it to see our style rules. -->
+    <link rel="stylesheet" type="text/css" href="static/CSS/style.css">
+
+    
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="page-header">
+                    <img alt="NFL Logo" src="static/images/nfl_logo.png" style="float:left" >
+                        <center style="position:relative; top:70px;"><b>The future is now</b></center>
+                        <br>
+                        <hr>
+                </div>
+            </div>
+        </div>
+        <div class="row-play">
+            <hr>
+            <!-- <center><form id="preplay"> -->
+            <form id ="postplay" action="{{ url_for('main') }}" method="POST">
+            <div class="col-md-12-pre">
+                <br>
+                <center><h3>
+                    Pre-Play Inputs
+                </h3></center>
+                <br>
+                <label for="posTeam"><b>Offensive Team:</b></label>
+                <select id="posTeam" name="posTeam">
+                    <option value="Select">Select</option>
+                    <option value="1">Arizona Cardinals</option>
+                    <option value="2">Atlanta Falcons</option>
+                    <option value="3">Baltimore Ravens</option>
+                    <option value="4">Buffalo Bills</option>
+                    <option value="5">Carolina Panthers</option>
+                    <option value="6">Chicago Bears</option>
+                    <option value="7">Cincinnati Bengals</option>
+                    <option value="8">Cleveland Browns</option>
+                    <option value="9">Dallas Cowboys</option>
+                    <option value="10">Denver Broncos</option>
+                    <option value="11">Detroit Lions</option>
+                    <option value="12">Green Bay Packers</option>
+                    <option value="13">Houston Texans</option>
+                    <option value="14">Indianapolis Colts</option>
+                    <option value="15">Jacksonville Jaguars</option>
+                    <option value="16">Kansas City Chiefs</option>
+                    <option value="25">Las Vegas Raiders</option>
+                    <option value="18">Los Angeles Chargers</option>
+                    <option value="17">Las Angeles Rams</option>
+                    <option value="19">Miami Dolphins</option>
+                    <option value="20">Minnesota Vikings</option>
+                    <option value="21">New England Patriots</option>
+                    <option value="22">New Orleans Saints</option>
+                    <option value="23">New York Giants</option>
+                    <option value="24">New York Jets</option>
+                    <option value="26">Philadelphia Eagles</option>
+                    <option value="27">Pittsburgh Steelers</option>
+                    <option value="29">San Francisco 49ers</option>
+                    <option value="28">Seattle Seahawks</option>
+                    <option value="30">Tampa Bay Buccaneers</option>
+                    <option value="31">Tennessee Titans</option>
+                    <option value="32">Washington Redskins</option>
+                </select>
+                <br>
+                <label for="quarter"><b>Quarter:</b></label>
+                <select id="quarter" name="quarter">
+                    <option value="qSelect">Select</option>
+                    <option value="q1">1</option>
+                    <option value="q2">2</option>
+                    <option value="q3">3</option>
+                    <option value="q4">4</option>
+                    <option value="q5">Over Time</option>
+                </select>
+                <br>
+                <label for="timeOnClock"><b>Time on Clock (00:00):</b></label>
+                <input type="text" id="timeOnClock" name="timeOnClock">
+                <br>
+                <label for="down"><b>Down:</b></label>
+                <select id="down" name="down">
+                    <option value="dSelect">Select</option>
+                    <option value="d1">1</option>
+                    <option value="d2">2</option>
+                    <option value="d3">3</option>
+                    <option value="d4">4</option>
+                </select>
+                <br>
+                <label for="yardsToGo"><b>Yards To Go:</b></label>
+                <input type="number" id="yardsToGo" name="yardsToGo">
+                <br>
+                <label for="yardline"><b>Yardline:</b></label>
+                <input type="number" id="yardline" name="yardline">
+            </div>
+                <br>
+                <center><input type="submit" value="Submit"></center>
+                <br>
+            </form></center> 
+            <br>
+        </div>
+        <hr>
+        <br>
+        <br>
+        <div class="row">
+    <!--         <div class="col-md-12">
+                <center><h3>
+                    <div class="result" align="center">
+                        {% if result %}
+                            {% for variable, value in original_input.items() %}
+                                <b>{{ variable }}</b> : {{ value }}
+                            {% endfor %}
+                            <br>
+                            <br> The next play will be a <p style="font-size:50px">{{ result }}</p>
+                        {% endif %}
+                    </div>
+                </h3></center>
+            </div> -->
+        </div>
+        <br>
+        <hr>
+        <div class="row">
+            <div class="col-md-12">
+                <!-- <div class="select-style"><select id="SheetList"></select></div>
+                    <button class="button" onclick="getVizData()">Push data to Spreadsheet</button>
+                    <form onsubmit= "return false"></form>
+                    Home Team: <input type="text" id="bin"/><br />
+                    <input type="button" value="Submit data" onclick="getVizData();"/>
+                    </form> -->
+                <div class='tableauPlaceholder' id='viz1590530184157' style='position: relative'>
+                    <noscript>
+                        <a href='#'>
+                            <img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Pr&#47;Project_3_NFL&#47;TeamDashboard2&#47;1_rss.png' style='border: none' />
+                        </a>
+                    </noscript>
+                    <object class='tableauViz'  style='display:none;'>
+                        <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> 
+                        <param name='embed_code_version' value='3' /> 
+                        <param name='site_root' value='' />
+                        <param name='name' value='Project_3_NFL&#47;TeamDashboard2' />
+                        <param name='tabs' value='no' /><param name='toolbar' value='yes' />
+                        <param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Pr&#47;Project_3_NFL&#47;TeamDashboard2&#47;1.png' /> 
+                        <param name='animate_transition' value='yes' />
+                        <param name='display_static_image' value='yes' />
+                        <param name='display_spinner' value='yes' />
+                        <param name='display_overlay' value='yes' />
+                        <param name='display_count' value='yes' />
+                        <param name='filter' value='publish=yes' />
+                    </object>
+                </div> 
+                <br>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="page-footer">
+                    <br>
+                    <center><h5>
+                        Punt, Pass, Predict 
+                    </h5>
+                    <h7>
+                        Property of and created by: Chad Gielow, Christian, Philip Molier, and Ty Sorensen
+                        <br>
+                        Year: 2020
+                    </h7></center>
+                    <br>    
+                </div>  
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="static/js/app.js"></script>
+</body>
+
+</html>
