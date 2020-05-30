@@ -47,3 +47,20 @@ class Transformer():
                 primary=index[i][1]
                 remaining=residual+primary
         return float(remaining)
+
+class Playdata():
+    
+    def __init__(self):
+        self.x=0 
+
+    def get_play_variable(self):
+        return self.x
+    
+    def set_play_variable(self,arg):
+        self.x=arg   
+        
+    def get_yrd_variable(self):
+        return self.x
+    
+    def set_yrd_variable(self,arg):
+        self.x=arg  
