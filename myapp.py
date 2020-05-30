@@ -23,17 +23,17 @@ def main():
     if flask.request.method == 'GET':
 
 
-        play = flask.request.args.get('playtype','pass')
+        play = flask.request.args.get('playType','pass')
         play_type_cat = Transformer().play_interpreter(play)
         post_data.set_play_variable(play_type_cat)
         # post_play=post_data.get_variable()
 
-        ydsnet = flask.request.args.get('ydsnet',5)
+        ydsnet = flask.request.args.get('yards',5)
         post_data.set_yrd_variable(ydsnet)
 
 
 
-        return(flask.render_template('pre_play.html'))
+        return(flask.render_template('preplay.html'))
 
 
 
@@ -44,11 +44,11 @@ def main():
    
         period = flask.request.form['quarter']
         quarter = Transformer().quarter_interpreter(period)
-        clock_time = flask.request.form['time']
+        clock_time = flask.request.form['timeOnClock']
         dn = flask.request.form['down']
         
-        posteam = flask.request.form['posteam']
-        ydstogo = flask.request.form['ydstogo']
+        posteam = flask.request.form['posTeam']
+        ydstogo = flask.request.form['yardsToGo']
         yardline_100 = flask.request.form['yardline'] 
         play_type_cat = post_data.get_play_variable()
         down = Transformer().down_interpreter(dn)
@@ -66,7 +66,7 @@ def main():
         prediction = Transformer().result_interpreter(output)
 
 
-        return flask.render_template('main_2.html',result=prediction)
+        return flask.render_template('postplay.html',result=prediction)
 
 
 if __name__ == '__main__':
