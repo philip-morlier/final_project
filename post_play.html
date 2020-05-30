@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+<style>
+form {
+    margin: auto;
+    width: 35%;
+}
+.result {
+    margin: auto;
+    width: 35%;
+    border: 1px solid #ccc;
+}
+</style>
+<head>
+    <title>Play Predictor Model</title>
+</head>
+<form action="{{ url_for('main') }}" method="GET">
+    <fieldset>
+        <legend>Input values:</legend>
+          <br>
+                    <label for="playtype">Actual Play:</label>
+                    <select id="playtype" name='playtype'>
+                        <option value="Select">Select</option>
+                        <option value="run">Run</option>
+                        <option value="pass">Pass</option>
+                        <option value="fieldGoal">Field Goal</option>
+                        <option value="punt">Punt</option>
+                    </select>
+                    <br>
+        <br>
+        <br>
+        <br> Yards Gained:
+        <input name="ydsnet" type="number" required>
+        <br>
+        <br>
+        <input type="submit">
+    </fieldset>
+</form>
+<br>
+<div class="result" align="center">
+    {% if result %}
+        <br>
+        <br> Predicted Play:
+           <p style="font-size:50px">{{ result }}</p>
+    {% endif %}
+</div>
+</html>
