@@ -1,3 +1,4 @@
+
 // initialize base dashboard with all teams
     
     var divElement = document.getElementById('viz1590530184157');                    
