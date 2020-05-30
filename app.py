@@ -12,7 +12,6 @@ from flask import request
 from flask import render_template
 
 from flask_cors import CORS
-# from config import password
 
 
 #################################################
@@ -20,7 +19,6 @@ from flask_cors import CORS
 #################################################
 
 engine = create_engine("postgresql://postgres:postgres@localhost:5432/puntpasspredict")
-
 
 conn = engine.connect()
 
@@ -41,10 +39,14 @@ CORS(app)
 #################################################
 
 # Route to render index.html
-# @app.route("/")
-# def home():
-#     # Return template and data
-#     return render_template("index.html")
+@app.route("/")
+def home():
+    # Return template and data
+    # return render_template("index.html")
+    return (
+        f"Available Routes:<br/>"
+        f"/api/v1.0/NFL_Plays"
+    )
 
 @app.route("/api/v1.0/NFL_Plays")   
 def plays():
@@ -57,7 +59,6 @@ def plays():
         NFL.away_team,
         NFL.posteam,
         NFL.game_date,
-        # NFL.yardline_100,
         NFL.time,
         NFL.qtr,
         NFL.down,
