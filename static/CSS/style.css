@@ -14,6 +14,20 @@ hr {
     border-color: #D50A0A;
 }
 
+.row-play {
+    background-color: #013369;
+    color: white;
+}
+
+.row-select-team {
+    background-color: #013369;
+    color: white;
+}
+
+.row-play {
+    align-items: center;
+}
+
 .tableauPlaceholder {
     margin-left: auto;
     margin-right: auto;
