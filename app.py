@@ -69,9 +69,8 @@ def plays():
         NFL.play_type,
         NFL.total_home_score,
         NFL.total_away_score, 
-        NFL.team_id.all())
+        NFL.team_id.all()),
     
-
     session.close()
 
     # Create a dictionary to hold play history data
