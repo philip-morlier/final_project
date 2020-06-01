@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Home</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <link rel="stylesheet" type="text/css" href="static/CSS/style.css">
+
+    
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="topnav">
+            <a class="active" href="index.html">Home</a>
+            <a href="templates/preplay.html">Pre-Play Inputs</a>
+            <a href="templates/postplay.html">Post-Play Inputs</a>
+            <a href="tableaudash.html" target="_blank">Tableau Dashboard</a>
+            <a href="tableaustory.html" target="_blank">Tableau Story</a>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="page-header">
+                    <img alt="NFL Logo" src="static/images/nfl_logo.png" style="float:left" >
+                        <center style="position:relative; top:70px;"><b>Punt, Pass, & Predict</b></center>
+                        <br>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <hr>
+                <br>
+                <h3>
+                    <center>Welcome to the Punt, Pass, Predict machine learning simulator</center>
+                </h3>
+                <br>
+                <p>
+                    In a world fueled by rapid advancement in technology, we attempted to answer a single question...If you built a machine learning algorithm and trained it with over 10 years of historical NFL play-by-play data, could you accurately predict the next play in a live football game? The answer...yes! 
+                    <br>
+                    <br> 
+                    Don't believe us? Try it out for yourself. Simply read the instructions below and follow-along during your favorite teams next game. Have fun!
+                </p>
+                <br>
+                <hr>
+                <br>
+                <h3>
+                    <center>How to play the game!</center>
+                </h3>
+                <br>
+                <p>
+                    <ol type = "1">
+                        <li>Before the game begins, review the information and inputs on the pre-play and post-play tabs. You will have to enter information for every play fairly quickly, so it will help if you know what is required in advance. </li>
+                        <li>Before the game begins, select the home and away team for today's match-up below and click submit.</li>
+                        <li>After the receiving team receives the initial kick-off enter the pre-play data and select submit. You must use proper formatting in the open text fields. If you do not use proper formatting the results will not be provided.</li>
+                        <li>Once you submit the pre-play data, the prediction for the next play will be displayed on the post-play page.</li>
+                        <li>After the play is completed, enter the result for play type and yards in the two post-play fields and press submit.</li>
+                        <li>Repeat these steps for the entire game and see how many times the algorithm accurately predicts the next play.</li>  
+                     </ol>
+                </p>
+                <br>
+            </div>
+        </div>
+        <div class="row-select-team-home">
+            <hr>
+            <div class="col-md-12">
+                <br>
+                <h3>
+                    <center>Let's get started...Select two teams for today's match-up</center>
+                </h3>
+                <br>
+                <center><form action="templates/preplay.html">
+                    <label for="homeTeam"><b>Home Team:</b></label>
+                    <select class="form-control" id="homeTeam" name="homeTeam" onClick="getHomeTeam">
+                        <option value="Select">Select</option>
+                        <option value="1">Arizona Cardinals</option>
+                        <option value="2">Atlanta Falcons</option>
+                        <option value="3">Baltimore Ravens</option>
+                        <option value="4">Buffalo Bills</option>
+                        <option value="5">Carolina Panthers</option>
+                        <option value="6">Chicago Bears</option>
+                        <option value="7">Cincinnati Bengals</option>
+                        <option value="8">Cleveland Browns</option>
+                        <option value="9">Dallas Cowboys</option>
+                        <option value="10">Denver Broncos</option>
+                        <option value="11">Detroit Lions</option>
+                        <option value="12">Green Bay Packers</option>
+                        <option value="13">Houston Texans</option>
+                        <option value="14">Indianapolis Colts</option>
+                        <option value="15">Jacksonville Jaguars</option>
+                        <option value="16">Kansas City Chiefs</option>
+                        <option value="25">Las Vegas Raiders</option>
+                        <option value="18">Los Angeles Chargers</option>
+                        <option value="17">Las Angeles Rams</option>
+                        <option value="19">Miami Dolphins</option>
+                        <option value="20">Minnesota Vikings</option>
+                        <option value="21">New England Patriots</option>
+                        <option value="22">New Orleans Saints</option>
+                        <option value="23">New York Giants</option>
+                        <option value="24">New York Jets</option>
+                        <option value="26">Philadelphia Eagles</option>
+                        <option value="27">Pittsburgh Steelers</option>
+                        <option value="29">San Francisco 49ers</option>
+                        <option value="28">Seattle Seahawks</option>
+                        <option value="30">Tampa Bay Buccaneers</option>
+                        <option value="31">Tennessee Titans</option>
+                        <option value="32">Washington Redskins</option>
+                    </select>
+                    <label for="awayTeam"><b>Away Team:</b></label>
+                    <select class="form-control" id="awayTeam" name="awayTeam" onClick="getAwayTeam">
+                        <option value="Select">Select</option>
+                        <option value="1">Arizona Cardinals</option>
+                        <option value="2">Atlanta Falcons</option>
+                        <option value="3">Baltimore Ravens</option>
+                        <option value="4">Buffalo Bills</option>
+                        <option value="5">Carolina Panthers</option>
+                        <option value="6">Chicago Bears</option>
+                        <option value="7">Cincinnati Bengals</option>
+                        <option value="8">Cleveland Browns</option>
+                        <option value="9">Dallas Cowboys</option>
+                        <option value="10">Denver Broncos</option>
+                        <option value="11">Detroit Lions</option>
+                        <option value="12">Green Bay Packers</option>
+                        <option value="13">Houston Texans</option>
+                        <option value="14">Indianapolis Colts</option>
+                        <option value="15">Jacksonville Jaguars</option>
+                        <option value="16">Kansas City Chiefs</option>
+                        <option value="25">Las Vegas Raiders</option>
+                        <option value="18">Los Angeles Chargers</option>
+                        <option value="17">Las Angeles Rams</option>
+                        <option value="19">Miami Dolphins</option>
+                        <option value="20">Minnesota Vikings</option>
+                        <option value="21">New England Patriots</option>
+                        <option value="22">New Orleans Saints</option>
+                        <option value="23">New York Giants</option>
+                        <option value="24">New York Jets</option>
+                        <option value="26">Philadelphia Eagles</option>
+                        <option value="27">Pittsburgh Steelers</option>
+                        <option value="29">San Francisco 49ers</option>
+                        <option value="28">Seattle Seahawks</option>
+                        <option value="30">Tampa Bay Buccaneers</option>
+                        <option value="31">Tennessee Titans</option>
+                        <option value="32">Washington Redskins</option>
+                    </select>
+                    <br>
+                    <center><input type="submit" value="Submit"></center>
+                    <br>
+                </form></center>
+                <br>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="page-footer">
+                    <br>
+                    <center><h5>
+                        Punt, Pass, & Predict 
+                    </h5>
+                    <h7>
+                        Property of and created by: Chad Gielow, Christian, Philip Molier, and Ty Sorensen
+                        <br>
+                        Year: 2020
+                    </h7></center>
+                    <br>    
+                </div>  
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="static/js/app.js"></script>
+</body>
+
+</html>
